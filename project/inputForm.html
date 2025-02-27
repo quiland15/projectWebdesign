@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Input Formulir</title>
+  </head>
+  <body>
+    <h2>Data yang Telah Dikirim</h2>
+    <table border="1" cellpadding="5" cellspacing="0">
+      <tr>
+        <th>Field</th>
+        <th>Value</th>
+      </tr>
+      <script>
+        const params = new URLSearchParams(window.location.search);
+        for (const [key, value] of params.entries()) {
+          document.write(`<tr><td>${key}</td><td>${value}</td></tr>`);
+        }
+      </script>
+    </table>
+    <br />
+    <a href="index.html">Kembali ke Form</a>
+  </body>
+</html>
