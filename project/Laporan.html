@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-dark bg-dark px-3">
+        <div class="d-flex align-items-center">
+            <button class="btn btn-dark" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <span class="navbar-brand mb-0 h1 ms-2">Pelanggan</span>
+        </div>
+        <div class="dropdown">
+            <button class="btn p-0 border-0 dropdown-toggle" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="/img/profile-icon-design-free-vector.jpg" alt="Profile" class="profile-img">
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                <li><a class="dropdown-item" href="Account.html">My Account</a></li>
+                <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-danger" href="Login.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="Dashboard.html"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+        <a href="Pelanggan.html"><i class="fas fa-users"></i> <span>Pelanggan</span></a>
+        <a href="Service.html"><i class="fas fa-wrench"></i> <span>Service</span></a>
+        <a href="#"><i class="fas fa-chart-bar"></i> <span>Laporan</span></a>
+        <a href="#"><i class="fas fa-box"></i> <span>Inventory</span></a>
+        <a href="#"><i class="fas fa-user"></i> <span>Mekanik</span></a>
+        <a href="#"><i class="fas fa-cog"></i> <span>Pengaturan</span></a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="container">
+            <!-- Ringkasan Keuangan -->
+            <div class="row">
+                <div class="container mt-4">
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <div class="info-card">
+                                <h5 class="card-title">Pendapatan Bulan Ini</h5>
+                                <h3 class="income">Rp 125.500.000</h3>
+                                <p class="text-success">+10% dari bulan lalu</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="info-card">
+                                <h5 class="card-title">Pengeluaran Bulan Ini</h5>
+                                <h3 class="expense">Rp 75.250.000</h3>
+                                <p class="text-danger">+8% dari bulan lalu</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="info-card">
+                                <h5 class="card-title">Laba Bersih</h5>
+                                <h3 class="profit">Rp 50.250.000</h3>
+                                <p class="text-primary">+12% dari bulan lalu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <!-- Grafik Keuangan -->
+                <div class="card mt-4 col-md-9"> 
+                    <div class="mt-5">
+                        <h4 class="text-center">Laporan Keuangan Tahunan</h4>
+                        <p class="text-center">Ringkasan pendapatan, pengeluaran, dan laba.</p>
+                        <div class="chart-container">
+                            <canvas id="financeChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Rekap Laporan Keuangan -->
+                <div class="card mt-4 col-md-6">
+                    <h4>Rekap Laporan Keuangan</h4>
+                    <p><strong>Rekap Pendapatan Tahun Ini:</strong></p>
+                    <ul>
+                        <li>Pendapatan Tahun Ini: Rp 125.500.000</li>
+                        <li>Pengeluaran Operasional Tahun Ini: Rp 75.250.000</li>
+                    </ul>
+                    <p><strong>Rekap Keseluruhan:</strong></p>
+                    <ul>
+                        <li>Pendapatan Keseluruhan: Rp 520.750.000</li>
+                        <li>Pengeluaran Operasional Keseluruhan: Rp 310.125.000</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,31 +1,147 @@
 body {
-    background: linear-gradient(to bottom, #87CEFA, #ffffff);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #e0e5ec;
+}
+.sidebar {
+    width: 250px;
     height: 100vh;
+    background: #1a1d24;
+    color: white;
+    padding: 20px;
+    transition: width 0.3s;
+    position: fixed;
+    top: 50px; /* Navbar height */
+    left: 0;
+    overflow: hidden;
 }
-.login-container {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+.sidebar.collapsed {
+    width: 80px;
 }
-.login-container h2 {
-    font-family: 'Cursive', sans-serif;
-    color: #00c8ff;
-    margin-bottom: 20px;
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    width: 100%;
 }
-.form-control {
-    border-radius: 10px;
+.sidebar.collapsed a span {
+    display: none;
 }
-.btn-primary {
-    border: none;
-    border-radius: 20px;
-    padding: 10px;
+.sidebar a:hover {
+    background: #333;
 }
-.btn-primary:hover {
-    background-color: #00c8ff;
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out; 
+    width: calc(100% - 250px);
+    margin-top: 56px; /* Adjust for navbar */
+    
+}
+.content.full {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+}
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.navbar a {
+    text-decoration: none;
+}
+.content.full {
+    margin-left: 80px; /* Ketika sidebar tertutup */
+    width: calc(100% - 80px);
+}
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0; /* Kalau layar kecil, sidebar hidden */
+        width: 100%;
+    }
+}
+.profile-container {
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+/* .badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    font-weight: bold;
+} */
+.profile-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.profile-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.content { margin-left: 260px; padding: 20px; }
+.info-box { padding: 15px; border-radius: 10px; color: white; }
+.info-box h5 { margin-bottom: 5px; }
+.editor-box { border: 1px solid #ddd; padding: 10px; border-radius: 5px; }
+
+.info-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.info-card h5 {
+    font-size: 16px;
+    color: #333;
+}
+.info-card .count {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+}
+.info-card .desc {
+    font-size: 14px;
+    margin-top: 5px;
+}
+.text-green { color: #28a745; } /* Hijau */
+.text-orange { color: #ff9800; } /* Oranye */
+.text-purple { color: #6f42c1; } /* Ungu */
+.card-summary {
+    text-align: center;
+    padding: 20px;
+}
+.income { color: green; }
+.expense { color: red; }
+.profit { color: blue; }
+.chart-container { width: 100%; height: 400px; }

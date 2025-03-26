@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-dark bg-dark px-3">
+        <div class="d-flex align-items-center">
+            <button class="btn btn-dark" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <span class="navbar-brand mb-0 h1 ms-2">Account</span>
+        </div>
+    </nav>
+    
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="Dashboard.html"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+        <a href="Pelanggan.html"><i class="fas fa-users"></i> <span>Pelanggan</span></a>
+        <a href="Service.html"><i class="fas fa-wrench"></i> <span>Service</span></a>
+        <a href="Laporan.html"><i class="fas fa-chart-bar"></i> <span>Laporan</span></a>
+        <a href="#"><i class="fas fa-box"></i> <span>Inventory</span></a>
+        <a href="#"><i class="fas fa-user"></i> <span>Mekanik</span></a>
+        <a href="#"><i class="fas fa-cog"></i> <span>Pengaturan</span></a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content col-md-9">
+        <div class="profile-card shadow-sm p-3">
+            <h5>My Profile</h5>
+            <div class="d-flex align-items-center">
+                <img src="/img/profile-icon-design-free-vector.jpg" alt="Profile Picture">
+                <div class="ms-3">
+                    <h6 class="mb-1">Quiland Wenas</h6>
+                    <p class="text-muted small mb-0">Team Manager<br> Kota Bitung, Indonesia</p>
+                </div>
+                <div class="ms-auto">
+                    <span class="edit-btn"><i class="fas fa-edit"></i> Edit</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Information -->
+        <div class="profile-card shadow-sm p-3 mt-3">
+            <h6>Personal Information</h6>
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-1 text-muted">First Name</p>
+                    <p>Quiland</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 text-muted">Last Name</p>
+                    <p>Wenas</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 text-muted">Email address</p>
+                    <p>s22110288@student.unklab.ac.id</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 text-muted">Phone</p>
+                    <p>+62 821 9298 7104</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 text-muted">Bio</p>
+                    <p>Team Manager</p>
+                </div>
+            </div>
+            <div class="text-end">
+                <span class="edit-btn"><i class="fas fa-edit"></i> Edit</span>
+            </div>
+        </div>
+
+        <!-- Address -->
+        <div class="profile-card shadow-sm p-3 mt-3">
+            <h6>Address</h6>
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-1 text-muted">Country</p>
+                    <p>Indonesia</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 text-muted">City/State</p>
+                    <p>Kota Bitung, Sulawasi Utara</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 text-muted">Postal Code</p>
+                    <p>95546</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 text-muted">Occupation</p>
+                    <p>Backend Developer</p>
+                </div>
+            </div>
+            <div class="text-end">
+                <span class="edit-btn"><i class="fas fa-edit"></i> Edit</span>
+            </div>
+        </div>
+
+        <div class="justify-content-end d-flex">
+            <a href="Login.html" class="text-black me-3" style="font-size: 20px;">
+                <i class="fas fa-sign-out-alt"></i>
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>

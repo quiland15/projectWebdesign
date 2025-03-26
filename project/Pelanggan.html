@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelanggan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-dark bg-dark px-3">
+        <div class="d-flex align-items-center">
+            <button class="btn btn-dark" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <span class="navbar-brand mb-0 h1 ms-2">Pelanggan</span>
+        </div>
+        <div class="dropdown">
+            <button class="btn p-0 border-0 dropdown-toggle" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="/img/profile-icon-design-free-vector.jpg" alt="Profile" class="profile-img">
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                <li><a class="dropdown-item" href="Account.html">My Account</a></li>
+                <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-danger" href="Login.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="Dashboard.html"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+        <a href="#"><i class="fas fa-users"></i> <span>Pelanggan</span></a>
+        <a href="Service.html"><i class="fas fa-wrench"></i> <span>Service</span></a>
+        <a href="Laporan.html"><i class="fas fa-chart-bar"></i> <span>Laporan</span></a>
+        <a href="#"><i class="fas fa-box"></i> <span>Inventory</span></a>
+        <a href="#"><i class="fas fa-user"></i> <span>Mekanik</span></a>
+        <a href="#"><i class="fas fa-cog"></i> <span>Pengaturan</span></a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="container mt-4">
+            <h2 class="fw-bold">Daftar Pelanggan</h2>
+            <p class="text-muted">Manajemen data pelanggan bengkel</p>
+            
+            <div class="d-flex justify-content-between mb-3">
+                <input type="text" class="form-control w-50" placeholder="Cari pelanggan...">
+                <button class="btn btn-dark">
+                    <i class="bi bi-person-plus"></i> Tambah Pelanggan
+                </button>
+            </div>
+            
+            <div class="table-responsive">
+                <table class="table table-bordered align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nama</th>
+                            <th>No. Telepon</th>
+                            <th>Alamat</th>
+                            <th>Kendaraan</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Ahmad Rizky</td>
+                            <td>081234567890</td>
+                            <td>Jl. Merdeka No. 123</td>
+                            <td>Honda Beat 2020</td>
+                            <td>
+                                <a href="text.html"><i class="fas fa-user text-primary me-2"></i></a>
+                                <i class="fas fa-trash text-danger me-2"></i>
+                                <i class="fas fa-info-circle text-success"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Budi Santoso</td>
+                            <td>085678901234</td>
+                            <td>Jl. Sudirman No. 45</td>
+                            <td>Yamaha NMAX 2021</td>
+                            <td>
+                                <i class="fas fa-user text-primary me-2"></i>
+                                <i class="fas fa-trash text-danger me-2"></i>
+                                <i class="fas fa-info-circle text-success"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Citra Dewi</td>
+                            <td>089012345678</td>
+                            <td>Jl. Gatot Subroto No. 67</td>
+                            <td>Honda Vario 2019</td>
+                            <td>
+                                <i class="fas fa-user text-primary me-2"></i>
+                                <i class="fas fa-trash text-danger me-2"></i>
+                                <i class="fas fa-info-circle text-success"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Deni Hermawan</td>
+                            <td>082345678901</td>
+                            <td>Jl. Ahmad Yani No. 89</td>
+                            <td>Suzuki GSX 2020</td>
+                            <td>
+                                <i class="fas fa-user text-primary me-2"></i>
+                                <i class="fas fa-trash text-danger me-2"></i>
+                                <i class="fas fa-info-circle text-success"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Eka Putri</td>
+                            <td>087890123456</td>
+                            <td>Jl. Diponegoro No. 12</td>
+                            <td>Honda PCX 2022</td>
+                            <td>
+                                <i class="fas fa-user text-primary me-2"></i>
+                                <i class="fas fa-trash text-danger me-2"></i>
+                                <i class="fas fa-info-circle text-success"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Faisal Rahman</td>
+                            <td>083456789012</td>
+                            <td>Jl. Pahlawan No. 34</td>
+                            <td>Yamaha R15 2021</td>
+                            <td>
+                                <i class="fas fa-user text-primary me-2"></i>
+                                <i class="fas fa-trash text-danger me-2"></i>
+                                <i class="fas fa-info-circle text-success"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Gita Nirmala</td>
+                            <td>086789012345</td>
+                            <td>Jl. Veteran No. 56</td>
+                            <td>Honda Scoopy 2018</td>
+                            <td>
+                                <i class="fas fa-user text-primary me-2"></i>
+                                <i class="fas fa-trash text-danger me-2"></i>
+                                <i class="fas fa-info-circle text-success"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Hadi Prasetyo</td>
+                            <td>088901234567</td>
+                            <td>Jl. Siliwangi No. 78</td>
+                            <td>Kawasaki Ninja 250 2019</td>
+                            <td>
+                                <i class="fas fa-user text-primary me-2"></i>
+                                <i class="fas fa-trash text-danger me-2"></i>
+                                <i class="fas fa-info-circle text-success"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Indah Lestari</td>
+                            <td>085678912345</td>
+                            <td>Jl. Dipatiukur No. 90</td>
+                            <td>Honda CBR 150 2022</td>
+                            <td>
+                                <i class="fas fa-user text-primary me-2"></i>
+                                <i class="fas fa-trash text-danger me-2"></i>
+                                <i class="fas fa-info-circle text-success"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Joko Widodo</td>
+                            <td>081278901234</td>
+                            <td>Jl. Malioboro No. 11</td>
+                            <td>Yamaha Aerox 2020</td>
+                            <td>
+                                <i class="fas fa-user text-primary me-2"></i>
+                                <i class="fas fa-trash text-danger me-2"></i>
+                                <i class="fas fa-info-circle text-success"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            
+            <div class="d-flex justify-content-between mt-3">
+                <p class="text-muted">Menampilkan 10 dari 10 pelanggan</p>
+                <nav>
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link">Sebelumnya</a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link">1</a>
+                        </li>
+                        <li class="page-item disabled">
+                            <a class="page-link">Selanjutnya</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-dark bg-dark px-3">
+        <div class="d-flex align-items-center">
+            <button class="btn btn-dark" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <span class="navbar-brand mb-0 h1 ms-2">Pelanggan</span>
+        </div>
+        <div class="dropdown">
+            <button class="btn p-0 border-0 dropdown-toggle" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="/img/profile-icon-design-free-vector.jpg" alt="Profile" class="profile-img">
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                <li><a class="dropdown-item" href="Account.html">My Account</a></li>
+                <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-danger" href="Login.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="Dashboard.html"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+        <a href="Pelanggan.html"><i class="fas fa-users"></i> <span>Pelanggan</span></a>
+        <a href="#"><i class="fas fa-wrench"></i> <span>Service</span></a>
+        <a href="Laporan.html"><i class="fas fa-chart-bar"></i> <span>Laporan</span></a>
+        <a href="#"><i class="fas fa-box"></i> <span>Inventory</span></a>
+        <a href="#"><i class="fas fa-user"></i> <span>Mekanik</span></a>
+        <a href="#"><i class="fas fa-cog"></i> <span>Pengaturan</span></a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="row">
+            <div class="container mt-4">
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <div class="info-card">
+                                <h5>Total Servis</h5>
+                                <div class="count">8</div>
+                                <div class="desc text-muted">7 hari terakhir</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="info-card">
+                                <h5>Selesai</h5>
+                                <div class="count">4</div>
+                                <div class="desc text-green">100% tepat waktu</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="info-card">
+                                <h5>Sedang Proses</h5>
+                                <div class="count">1</div>
+                                <div class="desc text-orange">Estimasi selesai hari ini</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="info-card">
+                                <h5>Terjadwal</h5>
+                                <div class="count">2</div>
+                                <div class="desc text-purple">Untuk besok</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mt-4">
+                <h2 class="fw-bold">Daftar Service</h2>
+                <p class="text-muted">Manajemen data service bengkel</p>
+
+                <div class="d-flex justify-content-between mb-3">
+                    <input type="text" class="form-control w-50" placeholder="Cari pelanggan...">
+                    <button class="btn btn-dark">
+                        <i class="fas fa-wrench"></i> Servis Baru
+                    </button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>ID</th>
+                                <th>Tanggal</th>
+                                <th>Pelanggan</th>
+                                <th>Motor</th>
+                                <th>Tipe Servis</th>
+                                <th>Mekanik</th>
+                                <th>Status</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SRV001</td>
+                                <td>2024-07-10</td>
+                                <td>Ahmad Rizky</td>
+                                <td>Honda Beat 2020</td>
+                                <td>Servis Rutin</td>
+                                <td>Agus</td>
+                                <td><span class="badge bg-success">✓ Selesai</span></td>
+                                <td>
+                                    <i class="fas fa-pen text-primary me-2"></i>
+                                    <i class="fas fa-eye text-success me-2"></i>
+                                    <i class="fas fa-trash text-danger"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SRV002</td>
+                                <td>2024-07-10</td>
+                                <td>Budi Santoso</td>
+                                <td>Yamaha NMAX 2021</td>
+                                <td>Ganti Oli</td>
+                                <td>Budi</td>
+                                <td><span class="badge bg-warning text-dark">⚪ Proses</span></td>
+                                <td>
+                                    <i class="fas fa-pen text-primary me-2"></i>
+                                    <i class="fas fa-eye text-success me-2"></i>
+                                    <i class="fas fa-trash text-danger"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SRV003</td>
+                                <td>2024-07-10</td>
+                                <td>Citra Dewi</td>
+                                <td>Honda Vario 2019</td>
+                                <td>Ganti Kampas Rem</td>
+                                <td>Charlie</td>
+                                <td><span class="badge bg-info">🔵 Menunggu</span></td>
+                                <td>
+                                    <i class="fas fa-pen text-primary me-2"></i>
+                                    <i class="fas fa-eye text-success me-2"></i>
+                                    <i class="fas fa-trash text-danger"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SRV004</td>
+                                <td>2024-07-09</td>
+                                <td>Deni Hermawan</td>
+                                <td>Suzuki GSX 2020</td>
+                                <td>Servis Mesin</td>
+                                <td>Dodi</td>
+                                <td><span class="badge bg-success">✓ Selesai</span></td>
+                                <td>
+                                    <i class="fas fa-pen text-primary me-2"></i>
+                                    <i class="fas fa-eye text-success me-2"></i>
+                                    <i class="fas fa-trash text-danger"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SRV005</td>
+                                <td>2024-07-09</td>
+                                <td>Eka Putri</td>
+                                <td>Honda PCX 2022</td>
+                                <td>Servis Rutin</td>
+                                <td>Edi</td>
+                                <td><span class="badge bg-success">✓ Selesai</span></td>
+                                <td>
+                                    <i class="fas fa-pen text-primary me-2"></i>
+                                    <i class="fas fa-eye text-success me-2"></i>
+                                    <i class="fas fa-trash text-danger"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SRV006</td>
+                                <td>2024-07-08</td>
+                                <td>Faisal Rahman</td>
+                                <td>Yamaha R15 2021</td>
+                                <td>Ganti Busi</td>
+                                <td>Agus</td>
+                                <td><span class="badge bg-success">✓ Selesai</span></td>
+                                <td>
+                                    <i class="fas fa-pen text-primary me-2"></i>
+                                    <i class="fas fa-eye text-success me-2"></i>
+                                    <i class="fas fa-trash text-danger"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SRV007</td>
+                                <td>2024-07-11</td>
+                                <td>Gita Nirmala</td>
+                                <td>Honda Scoopy 2018</td>
+                                <td>Servis Rutin</td>
+                                <td>-</td>
+                                <td><span class="badge bg-secondary">📅 Terjadwal</span></td>
+                                <td>
+                                    <i class="fas fa-pen text-primary me-2"></i>
+                                    <i class="fas fa-eye text-success me-2"></i>
+                                    <i class="fas fa-trash text-danger"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SRV008</td>
+                                <td>2024-07-11</td>
+                                <td>Hadi Prasetyo</td>
+                                <td>Kawasaki Ninja 250 2019</td>
+                                <td>Ganti Oli</td>
+                                <td>-</td>
+                                <td><span class="badge bg-secondary">📅Terjadwal</span></td>
+                                <td>
+                                    <i class="fas fa-pen text-primary me-2"></i>
+                                    <i class="fas fa-eye text-success me-2"></i>
+                                    <i class="fas fa-trash text-danger"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="d-flex justify-content-between mt-3">
+                    <p class="text-muted">Menampilkan 8 dari 8 pelanggan</p>
+                    <nav>
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link">Sebelumnya</a>
+                            </li>
+                            <li class="page-item active">
+                                <a class="page-link">1</a>
+                            </li>
+                            <li class="page-item disabled">
+                                <a class="page-link">Selanjutnya</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
