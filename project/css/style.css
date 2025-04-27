@@ -60,12 +60,7 @@ body {
     margin-left: 80px; /* Ketika sidebar tertutup */
     width: calc(100% - 80px);
 }
-@media (max-width: 768px) {
-    .content {
-        margin-left: 0; /* Kalau layar kecil, sidebar hidden */
-        width: 100%;
-    }
-}
+
 .profile-container {
     position: relative;
     display: flex;
@@ -145,3 +140,76 @@ body {
 .expense { color: red; }
 .profit { color: blue; }
 .chart-container { width: 100%; height: 400px; }
+
+/* Tambahan untuk Responsive */
+
+/* Untuk layar kecil (tablet ke bawah) */
+@media (max-width: 768px) {
+    body {
+        display: block;
+    }
+    .sidebar {
+        position: fixed;
+        top: 56px; /* sama kayak navbar */
+        left: -250px; /* disembunyikan keluar layar */
+        width: 250px;
+        height: calc(100% - 56px);
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+
+    .sidebar.show {
+        left: 0; /* Kalau tombol menu ditekan, sidebar muncul */
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+        margin-top: 70px; /* Biar ga ketutupan navbar */
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #1a1d24;
+    }
+
+    .navbar .menu-toggle {
+        display: block;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+/* Untuk layar HP super kecil (<400px) */
+@media (max-width: 400px) {
+    .info-card, .profile-card, .card-summary {
+        padding: 10px;
+    }
+
+    .info-card h5 {
+        font-size: 14px;
+    }
+
+    .info-card .count {
+        font-size: 24px;
+    }
+
+    .info-card .desc {
+        font-size: 12px;
+    }
+
+    .chart-container {
+        height: 250px; /* kecilin chart */
+    }
+
+    .profile-img {
+        width: 30px;
+        height: 30px;
+    }
+}
+

@@ -1,6 +1,21 @@
 function handleLogin(event) {
     event.preventDefault();
-    window.location.href = 'dashboard.html';
+
+    // Ambil nilai dari input field
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Contoh username dan password yang valid
+    const validUser = "admin";
+    const validPass = "123";
+
+    // Cek apakah input sesuai dengan user yang valid
+    if (email === validUser && password === validPass) {
+        alert("Login berhasil!");
+        window.location.href = 'dashboard.html'; // Arahkan ke halaman dashboard
+    } else {
+        alert("Username atau password salah!");
+    }
 }
 
 function toggleSidebar() {
