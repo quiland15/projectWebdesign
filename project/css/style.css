@@ -213,3 +213,7 @@ body {
     }
 }
 
+#profileDropdown::after {
+    display: none !important;
+}
+
